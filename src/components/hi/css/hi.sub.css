@@ -1,0 +1,6 @@
+.text {
+   text-transform: capitalize;
+   color: #fff;
+   font-weight: bold;
+   font-size: 4em !important;
+ }
