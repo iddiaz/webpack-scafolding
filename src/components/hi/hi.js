@@ -1,15 +1,15 @@
-import hiCss from './css/hi.css';
+import styles from './css/hi.module.css';
 
-console.log(hiCss)
+console.log(styles)
 
 export const sayHi = () =>{
-   document.querySelector('#app').innerText = 'HiComponent Works!';
+   document.querySelector('#root').innerText = 'HiComponent Works!';
 }
 
 const element = document.querySelector(".element");
 
 element.innerHTML = `
-   <div class="${hiCss.page}">
-     <p class="${hiCss.text}">CSS Modules Webpack</p>
+   <div class="${styles.page}">
+     <p class="${styles.text}">CSS Modules Webpack</p>
    </div>
 `;

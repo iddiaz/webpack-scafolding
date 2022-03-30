@@ -1,6 +1,7 @@
 import { sayHi } from "./components/hi/hi";
 
-import  './styles.scss';
+import './styles/scss/styles.scss';
+import './styles.css';
 
 
 

@@ -1,6 +1,10 @@
-body {
-   margin: 0;
-   padding: 0;
-   background-color: green;
- }
+
+
+.container {
+  /* interprea modulo */
+  background-color: green;
+  padding: 1rem;
+  border-radius: 4px;
+  font-size: 4rem;
+}
  
