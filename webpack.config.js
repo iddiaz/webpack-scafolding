@@ -11,7 +11,7 @@ const target = process.env.NODE_ENV === "production" ? "browserslist" : "web";
 
 
 const rulesForJavaScript = {
-   test: /\.m?js$/,
+   test: /\.m?jsx?$/,
    exclude: /node_modules/,
    use: {
       loader: "babel-loader",
@@ -20,7 +20,7 @@ const rulesForJavaScript = {
             '@babel/preset-env', 
             ['@babel/preset-react', 
                {
-                  runtime: 'automatic' // 'classic'
+                  runtime: 'automatic' // or 'classic'
                }
             ]
             
@@ -82,7 +82,6 @@ module.exports = (env, { mode }) => ({
       rules: [ rulesForJavaScript, rulesForStyles ]
    },
    plugins: [
-
       ...( mode === 'production' ? productionPlugins : developmentPlugins ),  
       
       //defaults plugins
@@ -98,6 +97,9 @@ module.exports = (env, { mode }) => ({
   
 
    ],
+   resolve: {
+      extensions: [".js", ".jsx"],
+   },
    // devtool: "inline-source-map",
    devtool: "source-map",
    devServer: {
