@@ -35,12 +35,17 @@ const rulesForStyles = {
    test: /\.s?css$/i,
    use: [
       // { loader: "style-loader" },
-      { loader: MiniCssExtractPlugin.loader },
+      { 
+         loader: MiniCssExtractPlugin.loader,
+         options: {
+            publicPath: ""
+         }
+      },
       {
          loader: "css-loader",
          options: {
             modules: true,
-            import: true,
+            import: true
          },
       },
       // {loader: "postcss-loader"},
@@ -49,6 +54,11 @@ const rulesForStyles = {
       }
    ],
 };
+
+const rulesForImgs = {
+   test: /\.(png|jpe?g|gif|svg)$/i,
+   type: "asset"
+}
 
 
 const developmentPlugins = [
@@ -79,7 +89,7 @@ module.exports = (env, { mode }) => ({
       },
    // target: ["web", "es5"],
    module: {
-      rules: [ rulesForJavaScript, rulesForStyles ]
+      rules: [ rulesForJavaScript, rulesForStyles, rulesForImgs ]
    },
    plugins: [
       ...( mode === 'production' ? productionPlugins : developmentPlugins ),  

@@ -1,9 +1,6 @@
-// @use "global";
-@use "hero";
 
-
-
-.hero{  
+.hero{
+  
    background: url("../../images/clip.png");
    background-size: cover;
    background-position: center;
@@ -11,8 +8,4 @@
    width: 100%;
    height: 100px;
 
-}
-
-.parrafo {
-   color: green;
 }

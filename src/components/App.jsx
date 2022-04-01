@@ -1,16 +1,20 @@
-import React from 'react'
 
+// import '../styles.css';
 import '../styles/scss/styles.scss';
-import '../styles.css';
+
 
 
 
 const App = () => {
   return (
-    <section className='hero'>
-       <h1>React component works!</h1>
-      
+    <>
+    <section>
+
+       <h3>React component works!</h3>      
     </section>
+     <section className="hero"></section>
+     <p className='parrafo'>adsjhclkdjschslkdjchlskd</p>
+    </>
   )
 }
 
